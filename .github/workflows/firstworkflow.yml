@@ -17,3 +17,5 @@ jobs:
     steps:
     - run: echo Hello ${{ github.event.inputs.message }}
       name: Greeting Command
+    - name: Check Event
+      run: echo ${{ github['event_name'] }} 
