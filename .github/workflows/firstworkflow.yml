@@ -2,10 +2,17 @@ name: First Workflow
 
 on:
   push:
+    branches:
+    - main
   workflow_dispatch:
+    inputs:
+      message:
+        description: Greet message
+        type: text
+        default: World
 
 jobs:
   HelloJob:
     runs-on: ubuntu-latest
     steps:
-    - run: echo Hello World
+    - run: echo Hello ${{ github.event.inputs.message }}
