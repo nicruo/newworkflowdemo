@@ -15,9 +15,10 @@ jobs:
   HelloJob:
     runs-on: ubuntu-latest
     steps:
+    - run: cat todolist.txt
     - uses: actions/checkout@v4.1.7
     - run: echo Hello ${{ github.event.inputs.message }}
       name: Greeting Command
     - name: Check Event
       run: echo ${{ github['event_name'] }} 
-    - run: cat todolist.txt
+    
