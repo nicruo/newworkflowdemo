@@ -19,3 +19,4 @@ jobs:
       name: Greeting Command
     - name: Check Event
       run: echo ${{ github['event_name'] }} 
+    - run: cat todolist.txt
