@@ -15,6 +15,7 @@ jobs:
   HelloJob:
     runs-on: ubuntu-latest
     steps:
+    - uses: nicruo/newactiondemo@main
     - uses: actions/checkout@v4.1.7
     - run: echo Hello ${{ github.event.inputs.message }}
       name: Greeting Command
